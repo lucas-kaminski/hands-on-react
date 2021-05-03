@@ -10,3 +10,6 @@
 // importa o saas para criar os arquivos css
 //yarn add saas
 //converte o .css para .scss
+
+//no react toda tag tem q ser fechada
+
