@@ -1,6 +1,5 @@
 //DOM = Document Object Model
 
-
 //Pegar a tag por id (#)
 console.log(document.getElementById("exemplo"));
 //Pega o valor da tag
@@ -16,3 +15,10 @@ console.log(document.getElementsByTagName("h2")[0].innerHTML)
 
 //pelo nome
 console.log(document.getElementsByName('nome'))
+
+//Query selector sempre retorna o primeiro
+console.log(document.querySelector("#exemplo"))
+
+//Query selector que retorna todos
+console.log(document.querySelectorAll("h2"))
+

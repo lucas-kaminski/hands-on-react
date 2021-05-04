@@ -1,0 +1,32 @@
+.verde {
+    background-color: green;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.preto {
+    background-color: black;
+}
+
+#imagem {
+    width: 100px;
+    height: 100px;
+    padding-left: 20px;
+}
+html {
+    height: 1500px;
+    width: 1500px;
+}
+
+.texto {
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    background-color: chocolate;
+}
