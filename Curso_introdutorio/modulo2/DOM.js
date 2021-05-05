@@ -23,7 +23,7 @@ console.log(document.querySelector("#exemplo"))
 console.log(document.querySelectorAll("h2"))
 
 //semopre retorna um array
-console.log(document.querySelectorAll("body))
+console.log(document.querySelectorAll("body"));
 
 //
-console.log(document.querySelector("body.id"))
+console.log(document.querySelector("body.id"));
