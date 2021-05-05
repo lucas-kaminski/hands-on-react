@@ -22,3 +22,8 @@ console.log(document.querySelector("#exemplo"))
 //Query selector que retorna todos
 console.log(document.querySelectorAll("h2"))
 
+//semopre retorna um array
+console.log(document.querySelectorAll("body))
+
+//
+console.log(document.querySelector("body.id"))
