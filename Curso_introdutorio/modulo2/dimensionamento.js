@@ -1,6 +1,6 @@
 //dimensões de dentro do objeto
-var altura_total = document.querySelector("#imagem").offsetHeight
-var largura_total = document.querySelector("#imagem").offsetWidth
+var altura_total = document.querySelector("html").offsetHeight
+var largura_total = document.querySelector("html").offsetWidth
 console.log(altura_total, largura_total)
 
 //dimensões de dentro do objeto sem a barra de rolagem
@@ -17,12 +17,12 @@ console.log(altura_total, largura_total)
 //se for saber do html, pega via window
     //window.scrollY
     //window.scrollX
-var scroll_vertical = document.querySelector(".texto").scrollTop
-var scroll_horizontal = document.querySelector(".texto").scrollLeft
+var scroll_vertical = document.querySelector("html").scrollTop
+var scroll_horizontal = document.querySelector("html").scrollLeft
 console.log(scroll_vertical, scroll_horizontal)
 
 //movimentar o scroll
-document.querySelector(".texto").scrollTo(0,0) //x,y
+//document.querySelector(".texto").scrollTo(0,0) //x,y
 
 function subirTela() {
     window.scrollTo({
@@ -32,3 +32,17 @@ function subirTela() {
     })
 }
 
+//Exercicio botton show baseadono scroll
+function decidirBotaoScroll() {
+    if (window.scrollY === 0){
+        document.querySelector("#ontop").classList.add('none');
+    } else {
+        document.querySelector("#ontop").classList.remove('none');
+    }
+}
+
+//Executa a função em determinado de tempo (devasado)
+//setInterval(decidirBotaoScroll, 1000)
+
+//Evento que rastrei algo, sempre que mudar algo efetua a função
+window.addEventListener('scroll',decidirBotaoScroll)
