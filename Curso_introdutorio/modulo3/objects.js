@@ -1,11 +1,17 @@
 //listagem NOMEADA (dict)
 
-let carro = {
+var carro = {
     nome:'Fiat',
     modelo:'Uno',
     peso:800,
+    ligado:false,
     ligar: function() {
-        console.log('Função em object')
+        this.ligado = true;
+        console.log(this.modelo); // referenciando o proprio object
+        console.log('Função em object');
+        if (this.ligado == true) {
+            console.log(this.ligado);
+        }
     }
 }
 
