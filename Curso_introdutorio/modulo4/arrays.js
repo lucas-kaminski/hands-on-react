@@ -31,6 +31,7 @@ console.log(lista1.concat(lista2)) // juntar dois arrays
 console.log(lista1.sort()); //ordena em ordem alfabética
 console.log(lista1.sort().reverse()) //o inverso
 
+//funções em array
 //function(item, index, array)
 let lista4 = [0,1,2,3,4,5,6,7,8,9,10]
 console.log(lista4.map(function(item) { //map aplica metodos index por index
@@ -73,3 +74,22 @@ console.log(lista4.findIndex(function(item){ //se existir, retorna o index, se n
     return (item == 20)? true:false
 }))
 
+//Descontruindo arrays
+arra1 = ["Lucas","Kaminski","KKKKK"]
+let [nomecompleto, nomezinho, sobrenomezinho] = arra1
+console.log(nomecompleto, nomezinho, sobrenomezinho)
+let [a] = arra1
+console.log(a)
+let [,,kkk] = arra1
+console.log(kkk);
+
+let [issoai, issosim, issomesmo] = ['issoai','issosim', 'issomesmo']
+console.log(issoai, issosim, issomesmo)
+
+function criar() {
+    let nume = [1,2,3]
+    return nume
+}
+
+let [nume1, nume2, nume3] = criar()
+console.log(nume1, nume2, nume3)
