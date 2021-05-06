@@ -26,3 +26,10 @@ console.log(resultado.trim()) //Tira todos os espaços não utilizados
 console.log(resultado.charAt(0)) //Retorna o valor do index
 
 console.log(resultado.split(' ')) //transforma em um array baseado no parametro de corte
+
+
+//Template strings
+var palavra1 = 'oi'
+var palavra2 = 'tchau'
+var frase = `Enquanto eu disse ${palavra1}, ela disse ${palavra2}` //usa o `` para funcionar o ${}
+console.log(frase);
