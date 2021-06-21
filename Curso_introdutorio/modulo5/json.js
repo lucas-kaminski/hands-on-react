@@ -6,7 +6,7 @@
 let pessoaJSON = {
     nome:'Lucas',
     sobrenome:'Kaminski',
-    caracteristicas: ['Programador','Fã']
+    caracteristicas: ['Programador','Fã'],
     estetica: {
         altura: 180,
         peso: 10
