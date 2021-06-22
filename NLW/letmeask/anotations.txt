@@ -15,3 +15,9 @@ para colocar a variavel para react
 REACT_APP_APP_ID: ''
 para chamar ela no projeto
 process.env.REACT_APP_APP_ID
+
+yarn add react-router-dom não vem com typescript
+para resolver
+yarn add @types/react-router-dom -D (desenvolvimento)
+import { BrowserRouter, Route } from 'react-router-dom'
+<Route path='/' exact component={Home} />  {/* o exact é para definir o caminho especifico, se não ele pega o começo */}
