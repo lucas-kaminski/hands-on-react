@@ -10,7 +10,12 @@ const config = {
   useSystemColorMode: false,
 }
 
-const theme = extendTheme({ config })
+const fonts = {
+  heading: "Heading Font Name",
+  body: "Rubik",
+}
+
+const theme = extendTheme({ config, fonts })
 
 ReactDOM.render(
   <React.StrictMode>

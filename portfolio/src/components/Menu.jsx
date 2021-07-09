@@ -1,5 +1,5 @@
 import { Button, Flex, Spacer } from '@chakra-ui/react'
-import React from 'react'
+import React, { useState } from 'react'
 
 const menus = [{
   key: 1,
@@ -15,9 +15,10 @@ const menus = [{
   label: 'Projetos'
 }]
 
-export default function Menu() {
+
+export default function Menu({ visibility }) {
   return (
-    <Flex bg='blue' h='10vh' alignItems="center" px={8} overflow='hidden' position='fixed' bottom={0} w='100%'>
+    <Flex h='10vh' alignItems="center" px={8} position='fixed' style={visibility ? { top: 0 } : { position: 'fixed', bottom: 0 }} overflow='hidden' bottom={0} w='100%' >
       Logo
       <Spacer />
       {menus.map(item => {

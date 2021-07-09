@@ -6,11 +6,17 @@ import Projects from "./components/Projects";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 
+import TrackVisibility from 'react-on-screen';
+import { useState } from "react";
+
 function App() {
+  const [visibility, setVisibility] = useState(true)
   return (
     <div className="App">
-      <Frontpage />
-      <Menu />
+      <TrackVisibility partialVisibility>
+        <Frontpage setVisibility={setVisibility} />
+      </TrackVisibility>
+      <Menu visibility={visibility} />
       <About />
       <Experience />
       <Projects />
