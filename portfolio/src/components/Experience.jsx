@@ -1,10 +1,10 @@
-import { Flex } from '@chakra-ui/react'
-import React from 'react'
+import { Flex } from "@chakra-ui/react";
+import React from "react";
 
 export default function Experience() {
   return (
-    <Flex h='90vh' bg='cyan'>
+    <Flex h="90vh" mt="10vh">
       Experiência
     </Flex>
-  )
+  );
 }

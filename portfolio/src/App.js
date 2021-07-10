@@ -6,24 +6,27 @@ import Projects from "./components/Projects";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
 
+import MainContextProvider from "./contexts/MainContextProvider";
+
 import TrackVisibility from 'react-on-screen';
-import { useState } from "react";
+import { Box } from '@chakra-ui/react'
 
 function App() {
-  const [visibility, setVisibility] = useState(true)
   return (
-    <div className="App">
-      <TrackVisibility partialVisibility>
-        <Frontpage setVisibility={setVisibility} />
-      </TrackVisibility>
-      <Menu visibility={visibility} />
-      <About />
-      <Experience />
-      <Projects />
-      <Blog />
-      <Contact />
-    </div>
-  );
+    <MainContextProvider>
+      <Box className="App" bg="primaryDark" >
+        <Menu />
+        <TrackVisibility partialVisibility>
+          <Frontpage />
+        </TrackVisibility>
+        <About />
+        <Experience />
+        <Projects />
+        <Blog />
+        <Contact />
+      </Box>
+    </MainContextProvider>
+  )
 }
 
 export default App;

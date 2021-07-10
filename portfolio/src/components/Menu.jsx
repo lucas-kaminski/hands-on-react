@@ -1,33 +1,57 @@
-import { Button, Flex, Spacer } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { Button, Text, Flex, Spacer } from "@chakra-ui/react";
+import React, { useContext } from "react";
 
-const menus = [{
-  key: 1,
-  idRef: '#about',
-  label: 'Sobre mim'
-}, {
-  key: 2,
-  idRef: '#experience',
-  label: 'Experiência'
-}, {
-  key: 3,
-  idRef: '#projects',
-  label: 'Projetos'
-}]
+import { MainContext } from "../contexts/MainContextProvider";
 
+const menus = [
+  {
+    key: 1,
+    idRef: "#about",
+    label: "Sobre mim",
+  },
+  {
+    key: 2,
+    idRef: "#experience",
+    label: "Experiência",
+  },
+  {
+    key: 3,
+    idRef: "#projects",
+    label: "Projetos",
+  },
+  {
+    key: 4,
+    idRef: "#blog",
+    label: "Blog",
+  },
+  {
+    key: 5,
+    idRef: "#contact",
+    label: "Contato",
+  },
+];
 
-export default function Menu({ visibility }) {
+export default function Menu() {
+  const { menuPositionTop } = useContext(MainContext);
   return (
-    <Flex h='10vh' alignItems="center" px={8} position='fixed' style={visibility ? { top: 0 } : { position: 'fixed', bottom: 0 }} overflow='hidden' bottom={0} w='100%' >
+    <Flex
+      h="10vh"
+      alignItems="center"
+      px="5vw"
+      position="fixed"
+      style={menuPositionTop ? { top: 0 } : { bottom: 0 }}
+      overflow="hidden"
+      w="100%"
+    >
       Logo
       <Spacer />
-      {menus.map(item => {
+      {menus.map((item) => {
         return (
-          <Button bg='pink' mx={2} key={item.key}>
-            {item.label}
+          <Button variant="unstyled" fontWeight="thin" mx={5} key={item.key}>
+            <Text _hover={{ borderBottom: "1px" }}>{item.label}</Text>
           </Button>
-        )
+        );
       })}
     </Flex>
-  )
+  );
 }

@@ -11,11 +11,15 @@ const config = {
 }
 
 const fonts = {
-  heading: "Heading Font Name",
-  body: "Rubik",
+  body: "Ubuntu",
 }
 
-const theme = extendTheme({ config, fonts })
+const colors = {
+  primaryDark: "#030303",
+  primaryLight: "#F9F9F9"
+}
+
+const theme = extendTheme({ config, fonts, colors })
 
 ReactDOM.render(
   <React.StrictMode>

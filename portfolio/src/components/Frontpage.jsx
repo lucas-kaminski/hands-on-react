@@ -1,16 +1,32 @@
-import { Center, Flex, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Flex, Text, Heading } from "@chakra-ui/react";
+import React, { useContext, useEffect } from "react";
+import { MainContext } from "../contexts/MainContextProvider";
 
-export default function Frontpage({ isVisible, setVisibility }) {
-  setVisibility(isVisible ? false : true)
+export default function Frontpage({ isVisible }) {
+  const { setMenuPositionTop } = useContext(MainContext);
+  useEffect(() => {
+    if (isVisible) {
+      setMenuPositionTop(false);
+    } else {
+      setMenuPositionTop(true);
+    }
+  }, [isVisible, setMenuPositionTop]);
 
   return (
-    <Center bg='red' h="90vh" className="front-page">
-      <Flex direction='column'>
-        <Text bg='blue'><Flex direction='row' justify='center'>Olá, eu sou o <Text bg='green'>Lucas Kaminski</Text></Flex>Sou um desenvolvedor web full-stack, saiba mais:</Text>
+    <Flex
+      direction="column"
+      align="center"
+      justifyContent="center"
+      my="auto"
+      h="90vh"
+    >
+      <Heading size="4xl">I'm Lucas Kaminski</Heading>
+      <Text>Javascript Full Stack Web Developer</Text>
+      <Flex position="absolute" mt="70vh">
+        button Know more mouse
       </Flex>
-    </Center>
-  )
+    </Flex>
+  );
 }
 
 // spacer flex no menu
