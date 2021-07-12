@@ -10,22 +10,26 @@ import MainContextProvider from "./contexts/MainContextProvider";
 
 import TrackVisibility from 'react-on-screen';
 import { Box } from '@chakra-ui/react'
+import Leftbar from "./components/Leftbar";
 
 function App() {
   return (
     <MainContextProvider>
       <Box className="App" bg="primaryDark" >
         <Menu />
+        <Leftbar />
         <TrackVisibility partialVisibility>
           <Frontpage />
         </TrackVisibility>
-        <About />
-        <Experience />
-        <Projects />
-        <Blog />
-        <Contact />
+        <Box ml="4vw" mt="10vh">
+          <About />
+          <Experience />
+          <Projects />
+          <Blog />
+          <Contact />
+        </Box>
       </Box>
-    </MainContextProvider>
+    </MainContextProvider >
   )
 }
 

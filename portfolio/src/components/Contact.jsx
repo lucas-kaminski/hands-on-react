@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <Flex id="contact" h="90vh" mt="10vh">
+    <Flex id="contact" h="90vh">
       Contato
     </Flex>
   );

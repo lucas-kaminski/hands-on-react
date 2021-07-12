@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 
 import { MainContext } from "../contexts/MainContextProvider";
 
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const menus = [
   {
@@ -54,7 +54,7 @@ export default function Menu() {
         offset={-70}
         duration={500}
       >
-        Logo
+        Logoaaa
       </Link>
       <Spacer />
       {menus.map((item) => {

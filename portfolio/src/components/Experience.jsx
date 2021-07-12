@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Experience() {
   return (
-    <Flex id="experience" h="90vh" mt="10vh">
+    <Flex id="experience" h="90vh">
       Experiência
     </Flex>
   );
