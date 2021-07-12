@@ -3,30 +3,32 @@ import React, { useContext } from "react";
 
 import { MainContext } from "../contexts/MainContextProvider";
 
+import { Link } from "react-scroll";
+
 const menus = [
   {
     key: 1,
-    idRef: "#about",
+    idRef: "about",
     label: "Sobre mim",
   },
   {
     key: 2,
-    idRef: "#experience",
+    idRef: "experience",
     label: "Experiência",
   },
   {
     key: 3,
-    idRef: "#projects",
+    idRef: "projects",
     label: "Projetos",
   },
   {
     key: 4,
-    idRef: "#blog",
+    idRef: "blog",
     label: "Blog",
   },
   {
     key: 5,
-    idRef: "#contact",
+    idRef: "contact",
     label: "Contato",
   },
 ];
@@ -35,6 +37,7 @@ export default function Menu() {
   const { menuPositionTop } = useContext(MainContext);
   return (
     <Flex
+      id="menu"
       h="10vh"
       alignItems="center"
       px="5vw"
@@ -43,13 +46,31 @@ export default function Menu() {
       overflow="hidden"
       w="100%"
     >
-      Logo
+      <Link
+        activeClass="active"
+        to="frontpage"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        Logo
+      </Link>
       <Spacer />
       {menus.map((item) => {
         return (
-          <Button variant="unstyled" fontWeight="thin" mx={5} key={item.key}>
-            <Text _hover={{ borderBottom: "1px" }}>{item.label}</Text>
-          </Button>
+          <Link
+            activeClass="active"
+            to={item.idRef}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
+            <Button variant="unstyled" fontWeight="thin" mx={5} key={item.key}>
+              <Text _hover={{ borderBottom: "1px" }}>{item.label}</Text>
+            </Button>
+          </Link>
         );
       })}
     </Flex>

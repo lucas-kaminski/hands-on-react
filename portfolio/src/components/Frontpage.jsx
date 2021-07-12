@@ -14,6 +14,7 @@ export default function Frontpage({ isVisible }) {
 
   return (
     <Flex
+      id="frontpage"
       direction="column"
       align="center"
       justifyContent="center"

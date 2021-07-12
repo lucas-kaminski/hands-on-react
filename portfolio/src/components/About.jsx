@@ -3,7 +3,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <Flex h="90vh" mt="10vh">
+    <Flex id="about" h="90vh" mt="10vh">
       Sobre mim
     </Flex>
   );
