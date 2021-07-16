@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "extends":["eslint:recommended", "react-app"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+  "ignorePatterns": ["node_modules/*", "!.prettierrc.js"],
+  "parserOptions": { "ecmaVersion": 8 }
+}
